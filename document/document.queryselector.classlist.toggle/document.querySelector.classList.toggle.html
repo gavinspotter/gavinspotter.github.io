@@ -1,24 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        c2 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
 
 
-<link rel="stylesheet" type="text/css" href="1style.css">
+    <div>
+        document.querySelector('#id or .class').classList.toggle('#id or .class'); - toggles a css class from an html
+        element
 
-   
-<div>
-    document.querySelector('#id or .class').classList.toggle('#id or .class'); - toggles a css class from an html element
+    </div>
+    <hr>
+    <div>integrated example </div>
+    <div class="c2">
+        document.querySelector('#id or .class').classList.toggle('#id or .class');
 
-</div>
-<hr>
-<div>integrated example </div>
-<div class="integration jesus">
-document.querySelector('#id or .class').classList.toggle('#id or .class'); 
+    </div>
+    <button id="button">click me</button>
+    <script>
 
-  </div>
-  <button id="button">click me</button>        
-   <script>    
-       
-       document.querySelector('#button').addEventListener('click', function(){
-           
- document.querySelector('.integration').classList.toggle('jesus');
-           
-       })
-</script>
+        document.querySelector('#button').addEventListener('click', function () {
+
+            document.querySelector('.c2').classList.toggle('c2');
+
+        })
+    </script>
+</body>
+
+</html>
