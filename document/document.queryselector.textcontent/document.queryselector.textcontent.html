@@ -8,14 +8,17 @@
 </head>
 
 <body>
+    <div> document.querySelector("#qselector").textContent = "text content"</div>
+    <hr>
+
     <div id="qselector">
 
         document.querySelector("#qselector").textContent = "text content"
 
     </div>
     <script>
-        document.querySelector("#qselector").textContent = "this was written using .textContent";
-
+        var qselector = document.querySelector("#qselector").textContent = "this was written using .textContent";
+        console.log(qselector)
     </script>
 </body>
 

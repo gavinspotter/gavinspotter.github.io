@@ -1,20 +1,42 @@
- <link rel="stylesheet" type="text/css" href="1style.css">
-         document.querySelector('#id or .class').classList.add('#id or .class'); - adds a css class from an html element
+<!DOCTYPE html>
+<html lang="en">
 
-        
-       <hr>
-<div>integrated example </div>
-<div class="resume">
-<div class="integration">
-document.querySelector('#id or .class').classList.add('#id or .class'); - 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    c2 {
+      color: green;
+    }
+  </style>
+</head>
 
+<body>
+
+
+
+  document.querySelector('#id or .class or element').classList.add('#id or .class or element'); - adds a css class from
+  an html element
+
+
+  <hr>
+  <div>integrated example </div>
+  <div class="c1">
+    <div class="c3">
+      document.querySelector('#id or .class').classList.add('#id or .class'); -
+
+    </div>
+    <button class="button">click me</button>
   </div>
-  <button class="button">click me</button> 
-</div>
-      <script>
- document.querySelector('.button').addEventListener('click', function(){
-           
- document.querySelector('.integration').classList.add('jesus');
-           
-       })
-</script>
+  <script>
+    document.querySelector('.button').addEventListener('click', function () {
+
+      document.querySelector('.c2').classList.add('c2');
+
+    })
+  </script>
+
+</body>
+
+</html>
