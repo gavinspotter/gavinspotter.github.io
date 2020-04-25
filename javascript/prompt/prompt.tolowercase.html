@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prompt</title>
+    <title>prompt().toLowerCase</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -12,32 +12,20 @@
 <body>
     <div class="container">
         <div class="row">
-            <div> prompt() - prompts the screen asking for a string value</div>
-
+            prompt().toLowerCase() - computes the input of a prompt to all lowercase
         </div>
-
         <hr>
         <div class="row">
-            <div class="col-md-3">
-                <button type="button" class="btn btn-primary" id="promptBtn">prompt</button>
-
-            </div>
-
-
-
-
-
+            <button type="button" class="btn btn-primary" id="lowercaseBtn">lowercase</button>
         </div>
     </div>
     <script>
-
-        var promptBtn = document.querySelector("#promptBtn")
-        promptBtn.addEventListener("click", function () {
-            var promptThing = prompt("whats your favorite type of car?")
-            console.log(promptThing)
+        var btnLowerCase = document.querySelector("#lowercaseBtn")
+        btnLowerCase.addEventListener("click", () => {
+            var promptLowerCase = prompt("check the console for lowercase entry").toLowerCase();
+            console.log(promptLowerCase)
         })
     </script>
-
 </body>
 
 </html>
