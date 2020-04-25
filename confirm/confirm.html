@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alert</title>
+    <title>confirm</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -12,24 +12,25 @@
 <body>
     <div class="container">
         <div class="row">
+
             <div>
-                alert() - prompts an alert
+                confirm() - prompts a confirmation generating a boolean answer
             </div>
         </div>
-        <hr>
-        <div>
-            <button type="button" class="btn btn-primary" id="chaos">alert</button>
 
+        <hr>
+        <div class="row">
+            <button type="button" class="btn btn-primary" id="confirmBtn">confirm</button>
         </div>
     </div>
-
-
     <script>
-        var chaos = document.querySelector("#chaos")
+        var confirmBtn = document.querySelector("#confirmBtn")
 
-        chaos.addEventListener("click", function () {
-            alert("this was written using alert()")
+        confirmBtn.addEventListener("click", function () {
+            var confirmthing = confirm("do you like cars?")
+            console.log(confirmthing)
         })
+
 
     </script>
 </body>
