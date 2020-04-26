@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            for (){} - executes code based on a condition
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <button type="button" class="btn btn-primary" id="loop1">for loop cars</button>
+                <div>for</div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <button type="button" class="btn btn-primary" id="loop2">for loop cars</button>
+                <div>for</div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <button type="button" class="btn btn-primary" id="loop3">for loop age</button>
+                <div>for</div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <button type="button" class="btn btn-primary" id="loop4">for loop check letter</button>
+                <div>for(){}ifelse(){}</div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+
+    <script>
+        var cars = ["toyota", "mazda", "ferrari", "mercedes"]
+
+        var carsLoop = document.querySelector("#loop1")
+        var carsLoop2 = document.querySelector("#loop2")
+        var age1 = document.querySelector("#loop3")
+        var carsLoop3 = document.querySelector("#loop4")
+
+        carsLoop.addEventListener("click", () => {
+            for (i = 0; i < cars.length; i++) {
+                console.log(cars[i])
+            }
+        })
+
+        carsLoop2.addEventListener("click", () => {
+            for (i = 0; i < 5; i++) {
+                console.log(cars[i])
+            }
+        })
+
+        age1.addEventListener("click", () => {
+            for (i = 20; i <= 24; i++) {
+                console.log("i am " + i)
+            }
+        })
+
+        carsLoop3.addEventListener("click", () => {
+            for (i = 0; i < cars.length; i++) {
+                console.log(cars[i])
+
+                if (cars[i].charAt(0) === "t") {
+                    console.log("its a toyota")
+                } else if (cars[i].charAt(0) === "f") {
+                    console.log("its a ferrari")
+                }
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
