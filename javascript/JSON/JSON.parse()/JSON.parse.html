@@ -11,9 +11,52 @@
 
 <body>
     <div class="container">
-        <div class="row"></div>
+        <div class="row">
+            JSON.parse()
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3 col-xs-3">
+                <button type="button" class="btn btn-primary" id="objBtn1">JSON.parse(JSON.stringify()) </button>
+                <div id="obj1"></div>
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <button type="button" class="btn btn-primary" id="objBtn2">JSON.parse()</button>
+                <div id="obj2"></div>
+            </div>
+        </div>
     </div>
     <script>
+        var obj = {
+            objkey1: "whats up",
+            objkey2: "was up"
+        }
+
+        var txt1 = '{"firstName":"Gavin", "lastName":"Potter", "age":24}'
+
+        var objParse1 = document.querySelector("#objBtn1")
+        var objParse2 = document.querySelector("#objBtn2")
+
+        objParse1.addEventListener("click", () => {
+
+            var parseStr = JSON.parse(JSON.stringify(obj))
+
+            document.querySelector("#obj1").textContent = parseStr.objkey2
+
+        })
+
+
+
+
+        objParse2.addEventListener("click", () => {
+            var parseTxt = JSON.parse(txt1);
+            document.querySelector("#obj2").textContent = parseTxt.firstName
+
+
+
+        })
+
+
 
 
     </script>
