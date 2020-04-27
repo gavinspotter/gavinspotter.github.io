@@ -5,13 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">
-        <div class="row"></div>
+        <div class="row">
+            <div id="parsed">wasu</div>
+            <div id="parsed2"></div>
+            <button type="button" class="btn btn-primary" id="obj1">parse</button>
+
+        </div>
     </div>
-    <script></script>
+    <script>
+        var obj = {
+            objkey1: "whats up",
+            objkey2: 2,
+            objkey3: "was up"
+        }
+
+        var objduh1 = document.querySelector("#obj1")
+
+        objduh1.addEventListener("click", () => {
+
+            var wasu = JSON.parse(JSON.stringify(obj))
+
+            document.querySelector("#parsed").textContent = wasu.objkey2
+
+        })
+
+        var wasu = JSON.parse(JSON.stringify(obj))
+
+        document.querySelector("#parsed").textContent = wasu.objkey1
+        document.querySelector("#parsed2").textContent = JSON.parse(JSON.stringify(obj.objkey3))
+
+
+
+
+    </script>
 </body>
 
 </html>
