@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.queryselector.textcontent</title>
+  </head>
+
+  <body>
+    <div>target.textContent = "text content"</div>
+    <hr />
+
+    <div id="qselector">
+      target.textContent = "text content"
+    </div>
+    <script>
+      var qselector = (document.querySelector("#qselector").textContent =
+        "this was written using .textContent");
+      console.log(qselector);
+    </script>
+  </body>
+</html>

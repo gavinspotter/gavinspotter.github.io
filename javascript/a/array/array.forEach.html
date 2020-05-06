@@ -14,15 +14,26 @@
 
   <body>
     <div class="container">
-      <div class="row"></div>
+      <div class="row">array.forEach((){})</div>
     </div>
     <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id="iceCoffee"></div>
+      </div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      var ingredients = ["ice", "coffee", "cream"];
+      var iceCoffee = document.querySelector("#iceCoffee");
+      ingredients.forEach((ingredient, index) => {
+        iceCoffee.innerHTML += index + "." + ingredient + "<br>";
+      });
+    </script>
   </body>
 </html>

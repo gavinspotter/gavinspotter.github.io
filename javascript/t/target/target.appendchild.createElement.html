@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.body.appendchild</title>
+  </head>
+
+  <body>
+    <div>
+      target.appendchild(target.createElement("element")) - adds an element to
+      the DOM
+    </div>
+
+    <script>
+      document.body.appendChild(document.createElement("div"));
+      document.body.children[0].appendChild(document.createElement("div"));
+    </script>
+  </body>
+</html>

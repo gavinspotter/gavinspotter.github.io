@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">.toFixed(#) - fixes a number to a decimal place</div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary" id="value1">
+            submit value
+          </button>
+          <input type="text" id="valueInput" />
+          <h3 id="response"></h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var btnValue1 = document.querySelector("#value1");
+      var inputValue = document.querySelector("#valueInput");
+      var valueResponse = document.querySelector("#response");
+      btnValue1.addEventListener("click", () => {
+        var response =
+          "parsed to the third decimal " +
+          parseFloat(inputValue.value).toFixed(3);
+        valueResponse.textContent = response;
+      });
+
+      var aFunction = () => {};
+    </script>
+  </body>
+</html>

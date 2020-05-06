@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>setInterval() - calls a function at specified interval, will continue to call the function until
+        clearInterval()
+        is called </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-primary" id="btnInt">click</button>
+                <div id="tInt"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tInterval = document.querySelector("#btnInt")
+        var timeInterval = document.querySelector("#tInt")
+
+        tInterval.addEventListener("click", () => {
+            var setTime = 20
+
+
+            var cloc = setInterval(() => {
+                setTime--;
+                timeInterval.textContent = setTime + "seconds left"
+
+                if (setTime === 0) {
+                    clearInterval(cloc)
+
+                }
+            }, 1000)
+        })
+
+        var anInterval = setInterval(() => {
+            console.log("hi");
+            clearInterval(anInterval);
+        }, 2000)
+
+
+
+
+    </script>
+</body>
+
+</html>

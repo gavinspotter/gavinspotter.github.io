@@ -14,7 +14,10 @@
 
   <body>
     <div class="container">
-      <div class="row"></div>
+      <div class="row">
+        split() - divides a string into an ordered set of substrings, puts these
+        substrings into an array, and returns the array
+      </div>
     </div>
     <hr />
 
@@ -23,6 +26,10 @@
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      var str = "Gavin Seth Potter";
+      var words = str.split(" ");
+      console.log(words[2]);
+    </script>
   </body>
 </html>
