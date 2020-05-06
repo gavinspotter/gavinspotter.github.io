@@ -15,11 +15,18 @@
   <body>
     <div class="container">
       <div class="row">
-        split() - divides a string into an ordered set of substrings, puts these
-        substrings into an array, and returns the array
+        event.clientX - computes the x quardinates of the browsers document.
       </div>
     </div>
     <hr />
+    <div>
+      x axis
+      <span id="x"></span>
+    </div>
+    <div>
+      y axis:
+      <div id="y"></div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
@@ -27,12 +34,15 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var str = "Gavin Seth Potter";
-      var words = str.split(" ");
-      console.log(words[2]);
-      var str2 = "Gavin-Seth-Potter";
-      var words2 = str2.split("-");
-      console.log(words[2]);
+      function click(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        document.querySelector("#x").textContent = x;
+        document.querySelector("#y").textContent = y;
+      }
+
+      document.addEventListener("click", click);
     </script>
   </body>
 </html>

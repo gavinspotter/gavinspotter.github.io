@@ -14,12 +14,13 @@
 
   <body>
     <div class="container">
-      <div class="row">
-        split() - divides a string into an ordered set of substrings, puts these
-        substrings into an array, and returns the array
-      </div>
+      <div class="row"></div>
     </div>
     <hr />
+    <div
+      style="background-color: green; width: 20px; height: 20px;"
+      id="target"
+    ></div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
@@ -27,12 +28,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var str = "Gavin Seth Potter";
-      var words = str.split(" ");
-      console.log(words[2]);
-      var str2 = "Gavin-Seth-Potter";
-      var words2 = str2.split("-");
-      console.log(words[2]);
+      var target = document.querySelector("#target");
+
+      target.addEventListener("click", (event) => {
+        alert();
+      });
     </script>
   </body>
 </html>

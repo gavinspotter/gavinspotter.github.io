@@ -15,8 +15,10 @@
   <body>
     <div class="container">
       <div class="row">
-        split() - divides a string into an ordered set of substrings, puts these
-        substrings into an array, and returns the array
+        includes(searchvalue, start) - determines whether a string contains
+        certain characters of a specificed string, returns true or false.<br />
+        searchvalue is required - the string to search for<br />
+        start is optional - default 0 where to begin the search
       </div>
     </div>
     <hr />
@@ -28,11 +30,8 @@
     ></script>
     <script>
       var str = "Gavin Seth Potter";
-      var words = str.split(" ");
-      console.log(words[2]);
-      var str2 = "Gavin-Seth-Potter";
-      var words2 = str2.split("-");
-      console.log(words[2]);
+      var n = str.includes("Seth");
+      console.log(n);
     </script>
   </body>
 </html>
