@@ -14,15 +14,22 @@
 
   <body>
     <div class="container">
-      <div class="row"></div>
+      <div class="row">event.code - computes the event key code</div>
     </div>
     <hr />
-
+    <div>keycode: <span id="code"></span></div>
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      function keydown(event) {
+        var keyCode = event.code;
+        document.querySelector("#code").textContent = keyCode;
+      }
+
+      document.addEventListener("keydown", keydown);
+    </script>
   </body>
 </html>
