@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        event.currentTarget - targets the element whos event listener triggers
+        the event
+      </div>
+    </div>
+    <hr />
+
+    <div
+      style="
+        background-color: green;
+        width: 200px;
+        height: 100px;
+        color: honeydew;
+      "
+      id="curTar"
+    >
+      check the console
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var curTarget = document.querySelector("#curTar");
+      curTarget.addEventListener("click", () => {
+        console.log(event.currentTarget);
+      });
+    </script>
+  </body>
+</html>

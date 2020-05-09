@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">localStorage.getItem(keyname)</div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-primary" id="setTime">
+            set
+          </button>
+          <div id="giveTime"></div>
+          <button type="button" class="btn btn-primary" id="getTime">
+            get
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var setTime = document.querySelector("#setTime");
+      var giveTime = document.querySelector("#giveTime");
+      var getTime = document.querySelector("#getTime");
+      var settimeFun = () => {
+        localStorage.setItem("mytime", Date());
+      };
+
+      var gettimeFun = () => {
+        var time = localStorage.getItem("mytime");
+        giveTime.textContent = time;
+      };
+
+      setTime.addEventListener("click", settimeFun);
+
+      getTime.addEventListener("click", gettimeFun);
+    </script>
+  </body>
+</html>

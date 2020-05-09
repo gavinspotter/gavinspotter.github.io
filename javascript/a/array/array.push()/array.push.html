@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>array.push()</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="row">
-            <div> array.push() - pushes or adds a value from an input to an array</div>
+      <div class="row">
+        <div>
+          array.push() - pushes or adds a value from an input to an array
         </div>
-        <div class="row">
-            <div class="col-sm-3">
-                <button type="button" class="btn btn-primary" id="pushPrompt">prompt</button>
-
-
-            </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-primary" id="pushPrompt">
+            prompt
+          </button>
+          <div id="arrayDOM"></div>
         </div>
+      </div>
     </div>
     <script>
+      var arr = [];
+      var pshPrompt = document.querySelector("#pushPrompt");
 
-        var array = [];
-        var pshPrompt = document.querySelector("pushPrompt")
+      pshPrompt.addEventListener("click", () => {
+        var prompt1 = prompt(
+          "pushes or adds the value from an input to an array"
+        );
 
-        pshPrompt.addEventListener("click", () => {
-            var prompt1 = prompt("pushes or adds the value from an input to an array")
-            array.push(prompt1)
+        arr.push(prompt1);
+      });
 
-        })
-
-
-
-
-
-
+      var arrayDOM = document.querySelector("#arrayDOM");
+      arrayDOM.textContent = array;
     </script>
-</body>
-
+  </body>
 </html>
