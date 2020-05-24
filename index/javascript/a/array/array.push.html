@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">array.push() - appends values to an array</div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <form>
+            <input type="text" id="pushInput" />
+          </form>
+          <button type="button" class="btn btn-primary" id="push">push</button>
+          <div id="arrDiv"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var arr = [];
+      var push = document.querySelector("#push");
+      var pushInput = document.querySelector("#pushInput");
+      var arPush = document.querySelector("#arrDiv");
+
+      push.addEventListener("click", () => {
+        arr.push(pushInput.value);
+        console.log(arr);
+        arPush.textContent = "";
+        arr.forEach((ar) => {
+          arPush.innerHTML += ar + "<br>";
+        });
+
+        pushInput.value = "";
+      });
+    </script>
+  </body>
+</html>

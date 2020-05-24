@@ -14,12 +14,16 @@
 
   <body>
     <div class="container">
-      <div class="row"></div>
+      <div class="row">
+        $().on("action", function(){}) - event listener
+      </div>
     </div>
     <hr />
     <div class="container">
       <div class="row">
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-primary" id="on">alert</button>
+        </div>
       </div>
     </div>
     <script
@@ -27,6 +31,10 @@
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      $("#on").on("click", () => {
+        alert("click");
+      });
+    </script>
   </body>
 </html>
